@@ -47,5 +47,8 @@ echo 1. 点 Settings → 左侧 Pages
 echo 2. Build and deployment 里 Source 选「GitHub Actions」
 echo 3. 等几分钟，在 Actions 里看到绿色勾后，Pages 页会显示网站地址
 echo.
+echo 若 Actions 里「deploy」报 404：先在 Settings→Pages 把 Source 设为 GitHub Actions，
+echo 再回到 Actions 对失败的那次点「Re-run all jobs」。
+echo.
 if defined GH_USER start "" "https://github.com/%GH_USER%/%REPO_NAME%/settings/pages"
 pause

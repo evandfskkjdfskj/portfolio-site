@@ -2,10 +2,10 @@ import { createRoot } from "react-dom/client";
 import { StrictMode } from "react";
 import TiltedCard from "./components/TiltedCard.jsx";
 import placeholderSvg from "./portrait-placeholder.svg?url";
+import portraitSrc from "./assets/figma-71/portrait.png";
 
 const rootEl = document.getElementById("portrait-tilt-root");
 if (rootEl) {
-  const portraitSrc = `${import.meta.env.BASE_URL}assets/figma-71/portrait.png`;
 
   createRoot(rootEl).render(
     <StrictMode>
