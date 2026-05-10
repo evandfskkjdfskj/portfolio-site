@@ -4,6 +4,16 @@ import TiltedCard from "./components/TiltedCard.jsx";
 import placeholderSvg from "./portrait-placeholder.svg?url";
 import portraitSrc from "./assets/figma-71/portrait.png";
 
+/* 尽早告诉浏览器拉取大图，减轻「先白块/占位再闪一下」与偶发加载失败 */
+if (typeof document !== "undefined") {
+  const pre = document.createElement("link");
+  pre.rel = "preload";
+  pre.as = "image";
+  pre.href = portraitSrc;
+  pre.setAttribute("fetchpriority", "high");
+  document.head.appendChild(pre);
+}
+
 const rootEl = document.getElementById("portrait-tilt-root");
 if (rootEl) {
 

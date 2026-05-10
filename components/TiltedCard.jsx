@@ -41,12 +41,21 @@ export default function TiltedCard({
 
   const [lastY, setLastY] = useState(0);
   const [activeSrc, setActiveSrc] = useState(imageSrc);
+  const loadRetried = useRef(false);
 
   useEffect(() => {
     setActiveSrc(imageSrc);
+    loadRetried.current = false;
   }, [imageSrc]);
 
   function handleImgError() {
+    // 大图在 Pages/CDN 上偶发中断，先 cache-bust 重试一次再换占位图（须改 state，勿直接改 img.src）
+    if (!loadRetried.current && typeof imageSrc === "string") {
+      loadRetried.current = true;
+      const base = imageSrc.split("?")[0];
+      setActiveSrc(`${base}?r=${Date.now()}`);
+      return;
+    }
     if (imageSrcFallback && activeSrc !== imageSrcFallback) {
       setActiveSrc(imageSrcFallback);
     }
@@ -117,6 +126,9 @@ export default function TiltedCard({
           alt={altText}
           className="tilted-card-img"
           draggable={false}
+          loading="eager"
+          decoding="sync"
+          fetchPriority="high"
           onError={handleImgError}
           style={{
             width: imageWidth,
