@@ -1,0 +1,1241 @@
+/* Figma node 71:9304 — 网页 — pixel layout 1920 reference */
+:root {
+  --figma-bg: #131313;
+  --figma-black: #000000;
+  --figma-line: #0e0e0e;
+  --figma-green: #3cb878;
+  --figma-green-dark: #369966;
+  --figma-gray-bar: #1e1e1e;
+  --figma-gray-mid: #414141;
+  --figma-muted: #979797;
+  --figma-award-text: #cfcec9;
+  --figma-white: #ffffff;
+  --figma-frame-w: 1920px;
+  /* 首屏背景底边 = 首条绿分割线（与 .figma-hr--1 同步） */
+  --figma-hero-hr-line-y: 933px;
+  --figma-hero-bg-top: -187px;
+  --font-montserrat: "Montserrat", system-ui, sans-serif;
+  --font-redhat: "Red Hat Text", "Noto Sans SC", sans-serif;
+  --font-noto-sc: "Noto Sans SC", "PingFang SC", sans-serif;
+  --font-mont-alt: "Montserrat Alternates", "Montserrat", sans-serif;
+  /* 时间轴中文项目名：西文用 Mont Alt，缺字时接 Noto / 苹方 */
+  --font-timeline-title: "Montserrat Alternates", "Montserrat", "Noto Sans SC", "PingFang SC",
+    "Microsoft YaHei", sans-serif;
+  --font-work: "Work Sans", "Noto Sans SC", sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--figma-bg);
+  color: var(--figma-white);
+  font-family: var(--font-montserrat);
+  -webkit-font-smoothing: antialiased;
+  overflow-x: auto;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* —— Frame —— 设计视口 1920 —— */
+.figma-viewport {
+  width: var(--figma-frame-w);
+  min-width: var(--figma-frame-w);
+  max-width: var(--figma-frame-w);
+  margin: 0 auto;
+  background: var(--figma-bg);
+}
+
+.figma-root {
+  position: relative;
+  width: var(--figma-frame-w);
+  min-height: 4059px;
+  margin: 0 auto;
+  background: var(--figma-bg);
+}
+
+/* Vertical guides */
+.figma-guides {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.figma-guides__line {
+  position: absolute;
+  top: 0;
+  width: 2px;
+  height: 4059px;
+  background: var(--figma-line);
+}
+
+.figma-guides__line:nth-child(1) {
+  left: 137px;
+}
+.figma-guides__line:nth-child(2) {
+  left: 420px;
+}
+.figma-guides__line:nth-child(3) {
+  left: 703px;
+}
+.figma-guides__line:nth-child(4) {
+  left: 986px;
+}
+.figma-guides__line:nth-child(5) {
+  left: 1269px;
+}
+.figma-guides__line:nth-child(6) {
+  left: 1552px;
+}
+.figma-guides__line:nth-child(7) {
+  left: 1835px;
+}
+
+/* Hero：底边与 .figma-hr--1 对齐，不延伸到绿线以下 */
+.figma-hero-bg {
+  position: absolute;
+  left: 0;
+  top: var(--figma-hero-bg-top);
+  width: 1920px;
+  height: calc(var(--figma-hero-hr-line-y) - var(--figma-hero-bg-top));
+  z-index: 0;
+  pointer-events: none;
+  overflow: hidden;
+  background:
+    radial-gradient(ellipse 95% 70% at 78% 18%, rgba(60, 184, 120, 0.22) 0%, transparent 55%),
+    radial-gradient(ellipse 80% 55% at 12% 72%, rgba(82, 39, 255, 0.12) 0%, transparent 50%),
+    linear-gradient(165deg, #0f1814 0%, #0a0f0d 45%, #0d120f 100%);
+}
+
+.figma-hero-bg__base {
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.figma-hero-bg__aurora.aurora-container,
+.figma-hero-bg .aurora-container {
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+}
+
+.figma-hero-bg canvas {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+/* Nav */
+.figma-nav {
+  position: absolute;
+  left: 1182px;
+  top: 82px;
+  z-index: 5;
+  display: flex;
+  align-items: center;
+  gap: 98px;
+  font-family: var(--font-montserrat);
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 1;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+  white-space: nowrap;
+}
+
+.figma-nav a {
+  letter-spacing: 0.02em;
+}
+
+.figma-nav a.is-active {
+  color: var(--figma-green);
+}
+
+.figma-nav a:not(.is-active) {
+  color: var(--figma-white);
+}
+
+.figma-nav .nav-exp {
+  text-transform: none;
+}
+
+.figma-home {
+  position: absolute;
+  left: 147px;
+  top: 73px;
+  width: 34px;
+  height: 34px;
+  z-index: 5;
+}
+
+.figma-home img {
+  width: 100%;
+  height: 100%;
+}
+
+/* Hero type */
+.figma-title-portfolio {
+  position: absolute;
+  left: 142px;
+  top: 329px;
+  margin: 0;
+  font-family: var(--font-montserrat);
+  font-weight: 900;
+  font-size: 96px;
+  line-height: 1;
+  text-transform: uppercase;
+  color: var(--figma-white);
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+  z-index: 3;
+}
+
+.figma-title-role {
+  position: absolute;
+  left: 142px;
+  top: 465px;
+  margin: 0;
+  font-family: var(--font-montserrat);
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 1;
+  text-transform: uppercase;
+  color: var(--figma-white);
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+  z-index: 3;
+}
+
+.figma-portrait {
+  position: absolute;
+  left: 960px;
+  top: 206px;
+  width: 525px;
+  height: 651px;
+  border-radius: 20px;
+  overflow: visible;
+  z-index: 3;
+  box-shadow: 0 24px 80px rgba(0, 0, 0, 0.45);
+}
+
+.figma-portrait__tilt {
+  width: 100%;
+  height: 100%;
+}
+
+/* React Bits TiltedCard：与原先 figure>img 裁切一致（覆盖组件内联宽高） */
+.figma-portrait .tilted-card-inner {
+  overflow: hidden;
+  border-radius: 20px;
+}
+
+.figma-portrait .tilted-card-img {
+  width: 100% !important;
+  height: 120.83% !important;
+  object-fit: cover !important;
+  object-position: center top !important;
+  margin-top: -13.5% !important;
+  border-radius: 20px !important;
+}
+
+.figma-name {
+  position: absolute;
+  left: 137px;
+  top: 776px;
+  margin: 0;
+  font-family: var(--font-montserrat), "Noto Sans SC", sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+  color: var(--figma-green);
+  z-index: 3;
+}
+
+.figma-contact-row {
+  position: absolute;
+  left: 137px;
+  top: 825px;
+  z-index: 3;
+  font-family: var(--font-montserrat);
+  font-size: 24px;
+  line-height: 1.2;
+  font-style: italic;
+  font-weight: 400;
+  color: var(--figma-white);
+}
+
+.figma-contact-row a {
+  font-style: italic;
+}
+
+.figma-contact-row .figma-tel {
+  margin: 0;
+}
+
+.figma-contact-row .figma-mail {
+  position: absolute;
+  left: 198px;
+  top: 0;
+  margin: 0;
+}
+
+/* Horizontal rules — Figma Vector 1190：1px 绿线，原资源为误命名 .png 的 SVG */
+.figma-hr {
+  position: absolute;
+  left: 0;
+  width: 1920px;
+  height: 1px;
+  z-index: 2;
+  background: #3cb878;
+  pointer-events: none;
+}
+
+.figma-hr--1 {
+  top: var(--figma-hero-hr-line-y);
+}
+.figma-hr--2 {
+  top: 1866px;
+}
+.figma-hr--3 {
+  top: 2794px;
+}
+
+/* —— Cards —— */
+.figma-card {
+  position: absolute;
+  background: var(--figma-black);
+  border-radius: 15px;
+  box-shadow: -10px 4px 20px rgba(0, 0, 0, 0.5);
+  z-index: 2;
+}
+
+.figma-card__title {
+  margin: 0 0 12px;
+  font-family: var(--font-montserrat);
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 1.2;
+  color: var(--figma-green);
+  text-transform: uppercase;
+}
+
+.figma-card__body {
+  margin: 0;
+  font-family: var(--font-redhat);
+  font-size: 22px;
+  line-height: 1.45;
+  color: var(--figma-white);
+}
+
+.figma-card--edu {
+  left: 305px;
+  top: 1065px;
+  width: 510px;
+  height: 187px;
+  padding: 33px 35px 0;
+}
+
+.figma-card--work {
+  left: 907px;
+  top: 1148px;
+  width: 510px;
+  height: 187px;
+  padding: 33px 35px 0;
+}
+
+.figma-card--award {
+  left: 340px;
+  top: 1407.88px;
+  width: 510px;
+  height: 342px;
+  padding: 33px 38px 0;
+}
+
+.figma-card--award .figma-award-list {
+  margin-top: 4px;
+}
+
+.figma-card--award .figma-card__body {
+  color: var(--figma-award-text);
+}
+
+.figma-card--skills {
+  left: 1095px;
+  top: 1357px;
+  width: 510px;
+  height: 342px;
+  padding: 33px 35px 0;
+}
+
+.figma-card--skills .figma-card__body {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
+
+.figma-card--skills .figma-skills-list {
+  margin-top: 8px;
+}
+
+.figma-award-list,
+.figma-skills-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
+
+.figma-award-list li,
+.figma-skills-list li {
+  font-family: var(--font-redhat);
+  font-size: 22px;
+  line-height: 1.35;
+}
+
+/* —— Projects —— */
+.figma-projects {
+  position: absolute;
+  left: 0;
+  top: 1990px;
+  width: 1920px;
+  height: 804px;
+  z-index: 2;
+}
+
+.figma-projects__title {
+  position: absolute;
+  left: 137px;
+  top: 0;
+  margin: 0;
+  font-family: "PingFang SC", var(--font-noto-sc);
+  font-weight: 600;
+  font-size: 24px;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+}
+
+.figma-projects__intro {
+  position: absolute;
+  left: 137px;
+  top: 58px;
+  width: 910px;
+  margin: 0;
+  font-family: var(--font-redhat);
+  font-size: 22px;
+  line-height: 1.45;
+  color: var(--figma-white);
+  opacity: 0.5;
+  text-transform: capitalize;
+}
+
+/* Timeline track */
+.figma-timeline {
+  position: absolute;
+  left: 173px;
+  top: 229px;
+  width: 1816px;
+  height: 420px;
+}
+
+.figma-timeline__base {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 1816px;
+  height: 138px;
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.figma-timeline__seg1 {
+  position: absolute;
+  left: 240px;
+  top: 0;
+  width: 1336px;
+  height: 138px;
+  background: var(--figma-gray-bar);
+}
+
+.figma-timeline__seg2 {
+  position: absolute;
+  left: 522px;
+  top: 0;
+  width: 980px;
+  height: 138px;
+  background: var(--figma-gray-mid);
+}
+
+.figma-timeline__active {
+  position: absolute;
+  left: 995px;
+  top: 0;
+  width: 925px;
+  height: 138px;
+  background: var(--figma-green-dark);
+}
+
+/* 2288 − 2219 = 69（相对时间轴顶与条带顶对齐） */
+.figma-timeline__label-bg {
+  position: absolute;
+  font-family: var(--font-mont-alt);
+  font-weight: 400;
+  font-size: 40px;
+  color: var(--figma-white);
+  line-height: 1;
+  top: 69px;
+  opacity: 0.1;
+  white-space: nowrap;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.figma-timeline__label-bg--slg1 {
+  left: 9px;
+}
+.figma-timeline__label-bg--fps {
+  left: 249px;
+}
+.figma-timeline__label-bg--sim {
+  left: 534px;
+}
+
+/* 2222 − 2219 = 3；left 与绿条起点一致（995） */
+.figma-timeline__label-bg--slg-big {
+  left: 995px;
+  top: 3px;
+  font-size: 96px;
+  line-height: 0.92;
+  opacity: 0.2;
+  letter-spacing: 0.02em;
+}
+
+/* 时间轴竖线 — Figma Line y=2331 → 相对时间轴顶 2331−2219=112 */
+.figma-timeline__vline {
+  position: absolute;
+  top: 112px;
+  width: 1px;
+  height: 152px;
+  background: #5e5e5e;
+  pointer-events: none;
+}
+
+.figma-timeline__vline--1 {
+  left: 240px;
+}
+.figma-timeline__vline--2 {
+  left: 522px;
+}
+/* 原 408px 会越过「VIEW」；收至副文案下沿与 VIEW 之间（约 112+288=400 ≤ 时间轴 420） */
+.figma-timeline__vline--3 {
+  left: 995px;
+  top: 112px;
+  width: 2px;
+  height: 288px;
+  background: rgba(252, 252, 252, 0.7);
+}
+
+/* Project column labels — absolute to .figma-projects（中文勿用 capitalize） */
+.figma-timeline__game {
+  position: absolute;
+  font-family: var(--font-timeline-title);
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 1.15;
+  text-transform: none;
+  top: 332px;
+  white-space: nowrap;
+  letter-spacing: 0.01em;
+}
+
+.figma-timeline__game--1 {
+  left: 182px;
+  opacity: 0.3;
+}
+.figma-timeline__game--2 {
+  left: 422px;
+  opacity: 0.7;
+}
+.figma-timeline__game--3 {
+  left: 707px;
+  opacity: 0.7;
+}
+/* 略向左收，与竖线(1168)、稿面 1181 折中，避免视觉上偏右 */
+.figma-timeline__game--4 {
+  left: 1174px;
+  opacity: 1;
+  font-size: 64px;
+  font-weight: 700;
+  line-height: 1.05;
+  top: 286px;
+  letter-spacing: -0.02em;
+}
+
+/* Meta under bar */
+.figma-pro-meta {
+  position: absolute;
+  font-family: var(--font-mont-alt);
+  top: 492.84px;
+}
+
+.figma-pro-meta__year {
+  margin: 0;
+  font-size: 13.159px;
+  color: var(--figma-green);
+  line-height: 1.508;
+  opacity: 0.5;
+}
+
+.figma-pro-meta__year--bright {
+  opacity: 1;
+}
+
+.figma-pro-meta__role {
+  margin: 19.85px 0 0;
+  font-size: 31.582px;
+  line-height: 42.438px;
+  color: var(--figma-white);
+  font-weight: 500;
+  opacity: 0.5;
+}
+
+.figma-pro-meta__role--dim {
+  opacity: 0.3;
+}
+
+.figma-pro-meta__role--full {
+  opacity: 1;
+}
+
+.figma-pro-meta__desc {
+  margin: 8px 0 0;
+  font-family: var(--font-work);
+  font-size: 15.791px;
+  line-height: 1.2856;
+  color: var(--figma-muted);
+  opacity: 0.5;
+  max-width: 190px;
+}
+
+/* 两行副文案与稿一致单行显示，避免增高后与 VIEW 重叠 */
+.figma-pro-meta__desc p {
+  margin: 0;
+  white-space: nowrap;
+}
+
+.figma-pro-meta__desc p + p {
+  margin-top: 3px;
+}
+
+.figma-pro-meta__desc--full {
+  opacity: 1;
+}
+
+.figma-pro-meta--1 {
+  left: 173px;
+}
+.figma-pro-meta--2 {
+  left: 413px;
+}
+.figma-pro-meta--3 {
+  left: 695px;
+}
+.figma-pro-meta--4 {
+  left: 1174px;
+}
+
+.figma-pro-meta--4 .figma-pro-meta__year {
+  opacity: 1;
+}
+
+.figma-pro-meta--1 .figma-pro-meta__year,
+.figma-pro-meta--3 .figma-pro-meta__year {
+  opacity: 0.5;
+}
+
+.figma-pro-meta--1 .figma-pro-meta__role,
+.figma-pro-meta--3 .figma-pro-meta__role {
+  opacity: 0.3;
+}
+
+.figma-pro-meta--2 .figma-pro-meta__role,
+.figma-pro-meta--3 .figma-pro-meta__role {
+  opacity: 0.5;
+}
+
+/* 稿 y=2611 → 相对区块 621px；略下移留出与副文案间距，避免折行重叠 */
+.figma-view-link {
+  position: absolute;
+  top: 648px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-weight: 800;
+  font-size: 16px;
+  letter-spacing: 0.04em;
+}
+
+.figma-view-link img {
+  width: 16.657px;
+  height: 11.657px;
+}
+
+.figma-view-link--1 {
+  left: 413px;
+}
+.figma-view-link--2 {
+  left: 695px;
+}
+.figma-view-link--3 {
+  left: 1174px;
+}
+
+/* —— Game case：视口 1920，三屏 JS 横向滑动 —— */
+.figma-case {
+  position: absolute;
+  left: 0;
+  top: 2794px;
+  width: var(--figma-frame-w);
+  height: 933px;
+  z-index: 2;
+  overflow: hidden;
+}
+
+.figma-case__viewport {
+  position: relative;
+  width: var(--figma-frame-w);
+  height: 933px;
+  overflow: hidden;
+}
+
+.figma-case__track {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  width: calc(3 * var(--figma-frame-w));
+  height: 933px;
+  transform: translateX(0);
+  transition: transform 0.45s cubic-bezier(0.33, 1, 0.68, 1);
+}
+
+.figma-case.is-reduced-motion .figma-case__track {
+  transition: none;
+}
+
+.figma-slide {
+  position: relative;
+  flex: 0 0 var(--figma-frame-w);
+  width: var(--figma-frame-w);
+  height: 933px;
+  overflow: hidden;
+}
+
+/* 轮播1 整屏点击进入案例详情（控制条 z-index 更高，仍可点箭头/圆点） */
+.figma-slide__detail-hit {
+  position: absolute;
+  inset: 0;
+  z-index: 8;
+  text-indent: -9999px;
+  overflow: hidden;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.figma-case__chrome {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 20px;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  pointer-events: none;
+}
+
+.figma-case__chrome > * {
+  pointer-events: auto;
+}
+
+.figma-case__btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  border: 1px solid rgba(60, 184, 120, 0.55);
+  border-radius: 50%;
+  background: rgba(19, 19, 19, 0.65);
+  color: var(--figma-green);
+  font-family: var(--font-montserrat);
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1;
+  cursor: pointer;
+  transition: background 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+}
+
+.figma-case__btn:hover,
+.figma-case__btn:focus-visible {
+  background: rgba(60, 184, 120, 0.2);
+  border-color: var(--figma-green);
+  color: var(--figma-white);
+  outline: none;
+}
+
+.figma-case__btn:focus-visible {
+  box-shadow: 0 0 0 2px var(--figma-bg), 0 0 0 4px var(--figma-green);
+}
+
+.figma-case__dots {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.figma-case__dot {
+  width: 8px;
+  height: 8px;
+  padding: 0;
+  border: none;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.28);
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.figma-case__dot:hover,
+.figma-case__dot:focus-visible {
+  background: rgba(255, 255, 255, 0.55);
+  outline: none;
+}
+
+.figma-case__dot.is-active {
+  background: var(--figma-green);
+  transform: scale(1.25);
+}
+
+.figma-slide__banner {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 1920px;
+  height: 908px;
+  overflow: hidden;
+}
+
+.figma-slide__banner--fullh {
+  height: 933px;
+}
+
+.figma-slide__banner--fullh img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.figma-slide__banner--dim img {
+  opacity: 0.9;
+}
+
+/* 轮播内横幅图勿受全局 img{max-width:100%} 影响缩放错位 */
+.figma-slide__banner > img {
+  max-width: none;
+}
+
+.figma-slide--1 .figma-slide__banner > img {
+  position: absolute;
+  width: 122.6%;
+  height: 145.82%;
+  left: -6.3%;
+  top: -53.82%;
+  max-width: none;
+  object-fit: cover;
+}
+
+/* 轮播1 · 率土之滨 — 对齐 Figma 72:10673（Position/Results 顶 654px 大白字，非 704px 绿小标） */
+.figma-slide--1 .figma-slide__kicker {
+  top: 654px;
+  font-size: 60px;
+  font-weight: 500;
+  line-height: 1;
+  color: #fff;
+  letter-spacing: 0.02em;
+  text-transform: none;
+}
+
+.figma-slide--1 .figma-slide__kicker--pos {
+  left: 981px;
+}
+
+.figma-slide--1 .figma-slide__kicker--res {
+  left: 1416px;
+}
+
+.figma-slide--1 .figma-slide__logo--s1 {
+  left: 125px;
+}
+
+.figma-slide--1 .figma-slide__intro--s1 {
+  left: 136px;
+}
+
+.figma-slide--1 .figma-slide__divider {
+  left: 829px;
+}
+
+.figma-slide--1 .figma-slide__pos {
+  left: 981px;
+}
+
+.figma-slide--1 .figma-slide__res {
+  left: 1417px;
+}
+
+.figma-slide--1 .figma-slide__text,
+.figma-slide--1 .figma-slide__roleline {
+  text-transform: none;
+}
+
+.figma-slide--1 .figma-slide__pos .figma-slide__text {
+  margin-top: 25px;
+}
+
+.figma-slide__fade {
+  position: absolute;
+  left: 0;
+  pointer-events: none;
+}
+
+/* 轮播1 底部渐变 — Figma tailwind from-[28.654%] … */
+.figma-slide__fade--s1 {
+  bottom: 0;
+  width: 1920px;
+  height: 336px;
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0) 28.654%,
+    rgba(19, 19, 19, 0.85) 59.662%,
+    #131313 72.51%
+  );
+}
+
+/* 轮播2/3 底部渐变 — Figma linear-gradient 179.99deg … */
+.figma-slide__fade--s2 {
+  bottom: 0;
+  width: 1920px;
+  height: 546px;
+  top: auto;
+  background: linear-gradient(
+    179.9999993202481deg,
+    rgba(19, 19, 19, 0) 16.713%,
+    rgba(19, 19, 19, 0.739) 37.837%,
+    rgba(19, 19, 19, 0.92) 46.327%,
+    rgb(19, 19, 19) 95.561%
+  );
+}
+
+.figma-slide__logo {
+  position: absolute;
+  z-index: 2;
+}
+
+.figma-slide__logo--s1 {
+  left: 124px;
+  top: 582px;
+  width: 480px;
+  height: 159px;
+}
+
+.figma-slide__logo--s1 img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.figma-slide__logo--s2 {
+  left: 71px;
+  top: 582px;
+  width: 517px;
+  height: 160px;
+}
+
+.figma-slide__logo--s2 img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.figma-slide__logo--s3 {
+  left: 71px;
+  top: 582px;
+  width: 559px;
+  height: 143px;
+}
+
+.figma-slide__logo--s3 img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: left center;
+}
+
+/* 案例区竖分割线 — 原 col-divider 为 SVG 误存为 .png */
+.figma-slide__divider {
+  position: absolute;
+  left: 828px;
+  top: 638px;
+  width: 2px;
+  height: 270.5px;
+  background: rgba(252, 252, 252, 0.7);
+  pointer-events: none;
+}
+
+.figma-slide__text {
+  margin: 0;
+  font-family: var(--font-redhat), "Noto Sans JP", "Noto Sans SC", sans-serif;
+  font-size: 16px;
+  line-height: 26px;
+  color: #fcfcfc;
+  opacity: 0.8;
+  text-transform: capitalize;
+}
+
+.figma-slide__roleline {
+  margin: 0 0 0;
+  font-family: var(--font-redhat), "Noto Sans JP", "Noto Sans SC", sans-serif;
+  font-size: 16px;
+  line-height: 26px;
+  color: #fcfcfc;
+  text-transform: capitalize;
+}
+
+.figma-slide__intro {
+  position: absolute;
+  top: 748px;
+  text-transform: none;
+}
+
+.figma-slide__intro--s1 {
+  left: 135px;
+  width: 580px;
+}
+
+.figma-slide__intro--s2 {
+  left: 102px;
+  width: 613px;
+}
+
+.figma-slide__kicker {
+  position: absolute;
+  margin: 0;
+  top: 704px;
+  font-family: var(--font-montserrat);
+  font-weight: 600;
+  font-size: 24px;
+  line-height: normal;
+  color: var(--figma-green);
+  white-space: nowrap;
+}
+
+.figma-slide__kicker--pos {
+  left: 980px;
+}
+
+.figma-slide__kicker--res {
+  left: 1415px;
+}
+
+.figma-slide__pos {
+  position: absolute;
+  left: 980px;
+  top: 748px;
+  width: 309px;
+}
+
+.figma-slide__pos .figma-slide__roleline {
+  margin-bottom: 0;
+}
+
+/* 稿中两文案为绝对定位时顶距约 25px；流式排版下职位行已有 line-height:26，再叠 25px 会过大 */
+.figma-slide__pos .figma-slide__text {
+  margin-top: 10px;
+}
+
+.figma-slide__res {
+  position: absolute;
+  top: 748px;
+  width: 399px;
+  left: 1416px;
+}
+
+/* —— Stats —— */
+.figma-stats {
+  position: absolute;
+  left: 0;
+  top: 3727px;
+  width: 1920px;
+  height: 273px;
+  background: var(--figma-green);
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 183px;
+}
+
+.figma-stat {
+  position: relative;
+  display: inline-grid;
+  grid-template-columns: max-content max-content;
+  grid-template-rows: max-content max-content;
+  color: #000000;
+  align-items: start;
+  justify-items: start;
+}
+
+.figma-stat__num {
+  grid-column: 1;
+  grid-row: 1;
+  font-family: var(--font-montserrat);
+  font-weight: 600;
+  font-size: 89.665px;
+  line-height: 0.95;
+  margin: 0;
+}
+
+.figma-stat__suffix {
+  grid-column: 2;
+  grid-row: 1;
+  margin-top: 26px;
+  margin-left: 6px;
+  font-family: "PingFang SC", var(--font-noto-sc);
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 1;
+}
+
+.figma-stat__suffix--plus {
+  font-size: 38.4px;
+  margin-top: 9px;
+  margin-left: 12px;
+}
+
+.figma-stat__label {
+  grid-column: 1 / -1;
+  grid-row: 2;
+  margin: 0;
+  margin-top: 46px;
+  font-family: "PingFang SC", var(--font-noto-sc);
+  font-weight: 400;
+  font-size: 28.8px;
+  line-height: 1.2;
+}
+
+.figma-stat--20 .figma-stat__suffix--plus {
+  margin-left: 6px;
+}
+
+.figma-stat--500 .figma-stat__suffix--plus {
+  margin-left: 10px;
+}
+
+.figma-stat--1200 .figma-stat__suffix--plus {
+  margin-left: 10px;
+}
+
+/* —— Footer —— */
+.figma-footer {
+  position: absolute;
+  left: 0;
+  top: 4000px;
+  width: 1920px;
+  height: 59px;
+  background: var(--figma-black);
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 80px;
+}
+
+.figma-footer__group {
+  display: flex;
+  align-items: center;
+  gap: 27px;
+}
+
+.figma-footer__group img {
+  flex-shrink: 0;
+}
+
+.figma-footer__mail-icon {
+  width: 37px;
+  height: 23px;
+}
+
+.figma-footer__phone-wrap {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* 正方形占位，避免旋转后角被裁切 */
+.figma-footer__phone-ring {
+  width: 40px;
+  height: 40px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.figma-footer__phone-icon {
+  width: 40px;
+  height: 26px;
+  display: block;
+  transform: rotate(90deg);
+  transform-origin: 50% 50%;
+}
+
+.figma-footer__text {
+  margin: 0;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 1;
+  color: var(--figma-white);
+}
+
+.figma-footer__text--light {
+  font-weight: 300;
+  margin-left: 8px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}

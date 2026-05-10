@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>王朝阳 · Game UX Designer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Noto+Sans+SC:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="tokens.css" />
+  <link rel="stylesheet" href="portfolio.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">跳到主要内容</a>
+
+  <div class="ambient" aria-hidden="true">
+    <div class="ambient__base"></div>
+    <div class="ambient__blob ambient__blob--1"></div>
+    <div class="ambient__blob ambient__blob--2"></div>
+    <div class="ambient__blob ambient__blob--3"></div>
+    <div class="ambient__blob ambient__blob--4"></div>
+    <div class="ambient__noise"></div>
+    <div class="ambient__grid"></div>
+  </div>
+
+  <div class="loader" id="loader" aria-hidden="true">
+    <div class="loader__inner">
+      <p class="loader__label label">Loading</p>
+      <div class="loader__bar"><span class="loader__fill" id="loader-fill"></span></div>
+      <p class="loader__pct"><span id="loader-pct">0</span></p>
+    </div>
+  </div>
+
+  <header class="site-header">
+    <div class="site-header__inner container">
+      <a class="site-header__wordmark label btn-pressable" href="#hero">Portfolio</a>
+      <nav class="site-header__nav" aria-label="主导航">
+        <a class="nav-link btn-pressable" href="#hero">封面</a>
+        <a class="nav-link btn-pressable" href="#about">关于</a>
+        <a class="nav-link btn-pressable" href="#summary">总结</a>
+        <a class="nav-link btn-pressable" href="#metrics">数据</a>
+        <a class="nav-link btn-pressable" href="#projects">经历</a>
+        <a class="nav-link btn-pressable" href="#work">作品</a>
+        <a class="nav-link btn-pressable" href="#contact">联系</a>
+      </nav>
+      <button type="button" class="site-header__menu btn-pressable" id="menu-toggle" aria-expanded="false" aria-controls="mobile-nav" aria-label="打开菜单">
+        <span class="site-header__menu-burger" aria-hidden="true">☰</span>
+        <span class="site-header__menu-close" aria-hidden="true">✕</span>
+      </button>
+    </div>
+  </header>
+
+  <div class="mobile-nav" id="mobile-nav" hidden>
+    <a class="mobile-nav__link btn-pressable" href="#hero">封面</a>
+    <a class="mobile-nav__link btn-pressable" href="#about">关于</a>
+    <a class="mobile-nav__link btn-pressable" href="#summary">总结</a>
+    <a class="mobile-nav__link btn-pressable" href="#metrics">数据</a>
+    <a class="mobile-nav__link btn-pressable" href="#projects">经历</a>
+    <a class="mobile-nav__link btn-pressable" href="#work">作品</a>
+    <a class="mobile-nav__link btn-pressable" href="#contact">联系</a>
+  </div>
+
+  <main id="main">
+    <section class="section section--hero" id="hero">
+      <div class="container hero__parallax" id="hero-parallax">
+        <div class="hero__grid">
+          <div class="hero__intro">
+            <span class="pill label">Game UX · 交互设计</span>
+            <h1 class="hero__title">
+              <span class="text-gradient">Portfolio</span>
+            </h1>
+            <p class="hero__subtitle text-gradient-accent">Game UX Designer</p>
+            <p class="hero__name">王朝阳</p>
+            <ul class="hero__meta" role="list">
+              <li><a class="link-glow btn-pressable" href="tel:18726700022">187 2670 0022</a></li>
+              <li><a class="link-glow btn-pressable" href="mailto:designer_evan@163.com">designer_evan@163.com</a></li>
+            </ul>
+          </div>
+          <figure class="surface-card surface-card--hero" data-spotlight>
+            <div class="surface-card__shine" aria-hidden="true"></div>
+            <img class="hero__photo" src="assets/cover-portrait.jpg" alt="王朝阳" width="833" height="1023" fetchpriority="high" />
+          </figure>
+        </div>
+      </div>
+      <a class="hero__scroll label btn-pressable" href="#about">Scroll ↓</a>
+    </section>
+
+    <div class="section-divider" aria-hidden="true"></div>
+
+    <section class="section" id="about">
+      <div class="container narrow reveal">
+        <p class="eyebrow label">About / 关于</p>
+        <div class="surface-card surface-card--quote" data-spotlight>
+          <p class="quote text-gradient">「交互是节奏、清晰度与可玩性之间的谈判。」</p>
+        </div>
+        <p class="lede">
+          先后参与过率土之滨、四方域之诗、荒野行动、指环王等多款游戏项目，拥有 2 年 SLG、1.5 年模拟经营、半年 FPS 多品类游戏设计经验。
+        </p>
+        <p class="muted">
+          The craft of interaction — clarity, rhythm, and play. 以系统化的信息结构与手感调优，支撑版本迭代与长线运营体验。
+        </p>
+      </div>
+    </section>
+
+    <div class="section-divider" aria-hidden="true"></div>
+
+    <section class="section" id="summary">
+      <div class="container reveal">
+        <p class="eyebrow label">Summary / 个人总结</p>
+        <h2 class="heading-section text-gradient">投入结构</h2>
+        <div class="surface-card surface-card--pad" data-spotlight>
+          <div class="bars" role="list">
+            <div class="bar-row" role="listitem">
+              <span class="bar-row__label label">版本迭代</span>
+              <div class="bar-row__track"><span class="bar-row__fill" style="--w: 54%"></span></div>
+              <span class="bar-row__value label">54%</span>
+            </div>
+            <div class="bar-row" role="listitem">
+              <span class="bar-row__label label">日常优化</span>
+              <div class="bar-row__track"><span class="bar-row__fill" style="--w: 31%"></span></div>
+              <span class="bar-row__value label">31%</span>
+            </div>
+            <div class="bar-row" role="listitem">
+              <span class="bar-row__label label">规范 + 活动</span>
+              <div class="bar-row__track"><span class="bar-row__fill" style="--w: 15%"></span></div>
+              <span class="bar-row__value label">15%</span>
+            </div>
+          </div>
+        </div>
+        <figure class="surface-card surface-card--media surface-card--pad-sm" data-spotlight>
+          <img src="assets/slide-summary.png" alt="Figma 个人总结版式参考" loading="lazy" width="960" height="540" />
+        </figure>
+      </div>
+    </section>
+
+    <div class="section-divider section-divider--accent" aria-hidden="true"></div>
+
+    <section class="section" id="metrics">
+      <div class="container reveal">
+        <p class="eyebrow label">Metrics / 规模</p>
+        <h2 class="heading-section text-gradient">交付与产出</h2>
+        <div class="bento">
+          <article class="surface-card surface-card--bento-hero" data-spotlight>
+            <p class="label muted">Overview</p>
+            <p class="bento__lead">多品类、多职能链路下的持续交付与界面产出。</p>
+          </article>
+          <article class="surface-card surface-card--stat" data-spotlight>
+            <span class="stat__num text-gradient">3</span>
+            <span class="stat__unit label">种</span>
+            <p class="label muted">游戏品类</p>
+          </article>
+          <article class="surface-card surface-card--stat" data-spotlight>
+            <span class="stat__num text-gradient">20+</span>
+            <p class="label muted">功能系统</p>
+          </article>
+          <article class="surface-card surface-card--stat" data-spotlight>
+            <span class="stat__num text-gradient">500+</span>
+            <p class="label muted">需求交付</p>
+          </article>
+          <article class="surface-card surface-card--stat" data-spotlight>
+            <span class="stat__num text-gradient">1200+</span>
+            <p class="label muted">界面设计</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <div class="section-divider" aria-hidden="true"></div>
+
+    <section class="section" id="projects">
+      <div class="container reveal">
+        <p class="eyebrow label">Projects / 项目经历</p>
+        <h2 class="heading-section text-gradient">时间线</h2>
+        <p class="lede muted">
+          从提案到主交互，在 SLG、FPS、模拟经营等品类中推进版本迭代与体验重塑。
+        </p>
+        <div class="timeline">
+          <article class="surface-card surface-card--pad timeline__card" data-spotlight>
+            <time class="label" datetime="2022">2022–2023</time>
+            <h3 class="heading-card">交互设计师 · 指环王</h3>
+            <p class="muted">理论与实践，全新的交互体验</p>
+          </article>
+          <article class="surface-card surface-card--pad timeline__card" data-spotlight>
+            <time class="label" datetime="2023">2023</time>
+            <h3 class="heading-card">提案设计师 · 荒野行动</h3>
+            <p class="muted">理论与实践，全新的交互体验</p>
+          </article>
+          <article class="surface-card surface-card--pad timeline__card" data-spotlight>
+            <time class="label" datetime="2023">2023–2024</time>
+            <h3 class="heading-card">主交互 · 四方域之诗</h3>
+            <p class="muted">补偏救弊，从难用到好玩</p>
+          </article>
+          <article class="surface-card surface-card--pad timeline__card" data-spotlight>
+            <time class="label" datetime="2024">2024—2026</time>
+            <h3 class="heading-card">交互设计师 · 率土之滨</h3>
+            <p class="muted">破茧焕新，为十年老游戏拓新途</p>
+          </article>
+        </div>
+        <figure class="surface-card surface-card--media surface-card--pad-sm" data-spotlight>
+          <img src="assets/slide-projects.png" alt="Figma 项目经历版式参考" loading="lazy" width="960" height="540" />
+        </figure>
+      </div>
+    </section>
+
+    <div class="section-divider" aria-hidden="true"></div>
+
+    <section class="section" id="work">
+      <div class="container">
+        <div class="work-head reveal">
+          <p class="eyebrow label">Figma / 全案画板</p>
+          <h2 class="heading-section text-gradient">作品集界面（11 屏）</h2>
+          <p class="muted">
+            与 Figma 文件「cursor测试」中 Section「作品集」的顶层画板顺序一致（按画布自上而下）。请将各画板导出为 1920×1080 的 PNG 或 WebP，放入
+            <span class="label">assets/figma/</span>，文件名与下表一致即可替换预览图。
+          </p>
+        </div>
+        <nav class="figma-toc reveal" aria-label="画板目录">
+          <ol class="figma-toc__list">
+            <li><a class="figma-toc__link btn-pressable label" href="#figma-slide-01">01 封面</a></li>
+            <li><a class="figma-toc__link btn-pressable label" href="#figma-slide-02">02 个人简历</a></li>
+            <li><a class="figma-toc__link btn-pressable label" href="#figma-slide-03">03 个人总结</a></li>
+            <li><a class="figma-toc__link btn-pressable label" href="#figma-slide-04">04 项目经历</a></li>
+            <li><a class="figma-toc__link btn-pressable label" href="#figma-slide-05">05 案例 96920</a></li>
+            <li><a class="figma-toc__link btn-pressable label" href="#figma-slide-06">06 用户原声 96924</a></li>
+            <li><a class="figma-toc__link btn-pressable label" href="#figma-slide-07">07 案例 96921</a></li>
+            <li><a class="figma-toc__link btn-pressable label" href="#figma-slide-08">08 阶段性结果 96925</a></li>
+            <li><a class="figma-toc__link btn-pressable label" href="#figma-slide-09">09 案例 96922</a></li>
+            <li><a class="figma-toc__link btn-pressable label" href="#figma-slide-10">10 结果验证 96926</a></li>
+            <li><a class="figma-toc__link btn-pressable label" href="#figma-slide-11">11 案例 96923</a></li>
+          </ol>
+        </nav>
+        <div class="figma-gallery">
+          <figure class="figma-gallery__item surface-card surface-card--media surface-card--pad-sm reveal" id="figma-slide-01" data-spotlight>
+            <img src="assets/figma/01-cover.png" alt="封面 PORTFOLIO" width="1920" height="1080" loading="lazy" />
+            <figcaption class="label">01 · 封面（1.封面）</figcaption>
+          </figure>
+          <figure class="figma-gallery__item surface-card surface-card--media surface-card--pad-sm reveal" id="figma-slide-02" data-spotlight>
+            <img src="assets/figma/02-resume.png" alt="个人简历" width="1920" height="1080" loading="lazy" />
+            <figcaption class="label">02 · 个人简历（2.个人简历）</figcaption>
+          </figure>
+          <figure class="figma-gallery__item surface-card surface-card--media surface-card--pad-sm reveal" id="figma-slide-03" data-spotlight>
+            <img src="assets/figma/03-summary.png" alt="个人总结与数据" width="1920" height="1080" loading="lazy" />
+            <figcaption class="label">03 · 个人总结（96918）</figcaption>
+          </figure>
+          <figure class="figma-gallery__item surface-card surface-card--media surface-card--pad-sm reveal" id="figma-slide-04" data-spotlight>
+            <img src="assets/figma/04-projects.png" alt="项目经历时间线" width="1920" height="1080" loading="lazy" />
+            <figcaption class="label">04 · 项目经历（96919）</figcaption>
+          </figure>
+          <figure class="figma-gallery__item surface-card surface-card--media surface-card--pad-sm reveal" id="figma-slide-05" data-spotlight>
+            <img src="assets/figma/05-96920.png" alt="案例画板 96920" width="1920" height="1080" loading="lazy" />
+            <figcaption class="label">05 · 案例（96920）</figcaption>
+          </figure>
+          <figure class="figma-gallery__item surface-card surface-card--media surface-card--pad-sm reveal" id="figma-slide-06" data-spotlight>
+            <img src="assets/figma/06-96924.png" alt="用户原声 96924" width="1920" height="1080" loading="lazy" />
+            <figcaption class="label">06 · 用户原声（96924）</figcaption>
+          </figure>
+          <figure class="figma-gallery__item surface-card surface-card--media surface-card--pad-sm reveal" id="figma-slide-07" data-spotlight>
+            <img src="assets/figma/07-96921.png" alt="案例 96921" width="1920" height="1080" loading="lazy" />
+            <figcaption class="label">07 · 案例（96921）</figcaption>
+          </figure>
+          <figure class="figma-gallery__item surface-card surface-card--media surface-card--pad-sm reveal" id="figma-slide-08" data-spotlight>
+            <img src="assets/figma/08-96925.png" alt="阶段性结果 96925" width="1920" height="1080" loading="lazy" />
+            <figcaption class="label">08 · 阶段性结果（96925）</figcaption>
+          </figure>
+          <figure class="figma-gallery__item surface-card surface-card--media surface-card--pad-sm reveal" id="figma-slide-09" data-spotlight>
+            <img src="assets/figma/09-96922.png" alt="案例 96922" width="1920" height="1080" loading="lazy" />
+            <figcaption class="label">09 · 案例（96922）</figcaption>
+          </figure>
+          <figure class="figma-gallery__item surface-card surface-card--media surface-card--pad-sm reveal" id="figma-slide-10" data-spotlight>
+            <img src="assets/figma/10-96926.png" alt="结果验证 96926" width="1920" height="1080" loading="lazy" />
+            <figcaption class="label">10 · 结果验证（96926）</figcaption>
+          </figure>
+          <figure class="figma-gallery__item surface-card surface-card--media surface-card--pad-sm reveal" id="figma-slide-11" data-spotlight>
+            <img src="assets/figma/11-96923.png" alt="案例 96923" width="1920" height="1080" loading="lazy" />
+            <figcaption class="label">11 · 案例（96923）</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <div class="section-divider section-divider--accent" aria-hidden="true"></div>
+
+    <section class="section section--contact" id="contact">
+      <div class="container narrow reveal">
+        <div class="surface-card surface-card--cta" data-spotlight>
+          <p class="eyebrow label">Contact / 联系</p>
+          <h2 class="heading-section text-gradient">王朝阳</h2>
+          <p class="cta__sub muted">Game UX Designer</p>
+          <div class="cta__actions">
+            <a class="btn btn--primary btn-pressable label" href="mailto:designer_evan@163.com">邮件 →</a>
+            <a class="btn btn--ghost btn-pressable label" href="tel:18726700022">电话</a>
+          </div>
+          <p class="cta__figma label muted">
+            设计源文件：
+            <a class="link-inline btn-pressable" href="https://www.figma.com/design/97bbFKujBUFrSozOD1E3sa/cursor%E6%B5%8B%E8%AF%95?node-id=67-8759" target="_blank" rel="noopener noreferrer">cursor测试 · 作品集 Section</a>
+            ·
+            <a class="link-inline btn-pressable" href="https://www.figma.com/design/RDVkJpIFwdXRYhgm2OQuxW/game-%ED%8F%AC%ED%8A%B8%ED%8F%B4%EB%A6%AC%EC%98%A4-%F0%9F%8E%A8?node-id=4272-33043" target="_blank" rel="noopener noreferrer">game 作品集</a>
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner label muted">
+      <p>© <span id="year"></span> 王朝阳 · Portfolio</p>
+    </div>
+  </footer>
+
+  <script src="portfolio.js"></script>
+</body>
+</html>

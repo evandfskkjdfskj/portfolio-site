@@ -1,0 +1,285 @@
+/* 率土之滨案例详情页 — 首屏 HTML 还原 Figma 72:10669，长图裁顶衔接 72:10440 余下部分 */
+
+.project-shuaitu-page {
+  margin: 0;
+  min-width: 1920px;
+  background: var(--figma-bg, #131313);
+  color: #fff;
+  -webkit-font-smoothing: antialiased;
+}
+
+.project-shuaitu-main {
+  padding: 0;
+}
+
+/* 与 Figma 72:10440 一致：固定 1920 宽，块级 x/y 用 margin 对齐（非居中） */
+.shuaitu-viewport {
+  width: 1920px;
+  max-width: none;
+  min-width: 1920px;
+  margin: 0 auto;
+  overflow-x: hidden;
+  box-sizing: border-box;
+}
+
+/* 首屏高度与案例轮播一致 */
+.shuaitu-hero {
+  position: relative;
+  width: 100%;
+  height: 933px;
+  overflow: hidden;
+  background: var(--figma-bg, #131313);
+}
+
+.shuaitu-hero__slide.figma-slide {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 933px;
+}
+
+/* Figma 72:10679 / 72:10680：Position / Results 为大白字标题，非绿小标 */
+.shuaitu-hero .figma-slide__kicker {
+  top: 654px;
+  font-size: 60px;
+  font-weight: 500;
+  line-height: 1;
+  color: #fff;
+  letter-spacing: 0.02em;
+  text-transform: none;
+}
+
+.shuaitu-hero .figma-slide__kicker--pos {
+  left: 981px;
+}
+
+.shuaitu-hero .figma-slide__kicker--res {
+  left: 1416px;
+}
+
+/* 中文正文勿 capitalize */
+.shuaitu-hero .figma-slide__text,
+.shuaitu-hero .figma-slide__roleline {
+  text-transform: none;
+}
+
+.shuaitu-hero .figma-slide__pos {
+  left: 981px;
+}
+
+/* 72:10669 与稿对齐：Logo / 引言 / 分割线 / 右栏起点 / Position 下正文间距 */
+.shuaitu-hero .figma-slide__logo--s1 {
+  left: 125px;
+}
+
+.shuaitu-hero .figma-slide__intro--s1 {
+  left: 136px;
+}
+
+.shuaitu-hero .figma-slide__divider {
+  left: 829px;
+}
+
+.shuaitu-hero .figma-slide__res {
+  left: 1417px;
+}
+
+.shuaitu-hero .figma-slide__pos .figma-slide__text {
+  margin-top: 25px;
+}
+
+/* 首屏底部分割线 — 对齐 Figma Vector 1190 */
+.shuaitu-hero-hr {
+  width: 100%;
+  height: 1px;
+  background: var(--figma-green, #3cb878);
+  pointer-events: none;
+}
+
+/* Figma 72:10440：首屏底 y=933 + Vector1190 后，首块 y=1066 → 与 HR 之间 132px */
+.shuaitu-body-stack {
+  width: 1920px;
+  margin: 0;
+  padding: 132px 0 0;
+  background: var(--figma-bg, #131313);
+  box-sizing: border-box;
+}
+
+/* 各切片 x、块间距取自 Figma 相邻 frame 的 y 差值；宽度与导出 PNG/HTML width 一致 */
+.shuaitu-body-stack img {
+  display: block;
+  height: auto;
+  margin: 0;
+  max-width: none;
+  pointer-events: none;
+  user-select: none;
+}
+
+.shuaitu-body-stack img:nth-child(1) {
+  margin-left: 210px;
+  width: 1502px;
+}
+
+.shuaitu-body-stack img:nth-child(2) {
+  margin-top: 67.5px;
+  margin-left: 61px;
+  width: 1716px;
+}
+
+.shuaitu-body-stack img:nth-child(3) {
+  margin-top: 179px;
+  margin-left: 61px;
+  width: 1802px;
+}
+
+.shuaitu-body-stack img:nth-child(4) {
+  margin-top: 180px;
+  margin-left: 61px;
+  width: 1502px;
+}
+
+.shuaitu-body-stack img:nth-child(5) {
+  margin-top: 123px;
+  margin-left: 61px;
+  width: 1855px;
+}
+
+.shuaitu-body-stack img:nth-child(6) {
+  margin-top: 180px;
+  margin-left: 61px;
+  width: 1644px;
+}
+
+.shuaitu-body-stack img:nth-child(7) {
+  margin-top: 180px;
+  margin-left: 1px;
+  width: 1919px;
+}
+
+.shuaitu-body-stack img:nth-child(8) {
+  margin-top: 180px;
+  margin-left: 61px;
+  width: 1806px;
+}
+
+.shuaitu-body-stack img:nth-child(9) {
+  margin-top: 180px;
+  margin-left: 1px;
+  width: 1920px;
+}
+
+.shuaitu-body-stack img:nth-child(10) {
+  margin-top: 150px;
+  margin-left: 59px;
+  width: 1804px;
+}
+
+.shuaitu-body-stack img:nth-child(11) {
+  margin-top: 150px;
+  margin-left: 58px;
+  width: 1804px;
+}
+
+.shuaitu-body-stack img:nth-child(12) {
+  margin-top: 150px;
+  margin-left: 58px;
+  width: 1804px;
+}
+
+.shuaitu-body-stack img:nth-child(13) {
+  margin-top: 150px;
+  margin-left: 1px;
+  width: 1920px;
+}
+
+.shuaitu-body-stack img:nth-child(14) {
+  margin-top: 150px;
+  margin-left: 86px;
+  width: 1804px;
+}
+
+.shuaitu-body-stack img:nth-child(15) {
+  margin-top: 150px;
+  margin-left: 7px;
+  width: 1913px;
+}
+
+.shuaitu-body-stack img:nth-child(16) {
+  margin-top: 150px;
+  margin-left: 44px;
+  width: 1804px;
+}
+
+.shuaitu-body-stack img:nth-child(17) {
+  margin-top: 150px;
+  margin-left: -80px;
+  width: 2049px;
+}
+
+.shuaitu-body-stack img:nth-child(18) {
+  margin-top: 150px;
+  margin-left: 55px;
+  width: 1804px;
+}
+
+.shuaitu-body-stack img:nth-child(19) {
+  margin-top: 150px;
+  margin-left: 61px;
+  width: 1859px;
+}
+
+/* 与稿面一致：胶囊、1px 绿边、半透底 + 轻模糊、白字（非实心绿字） */
+.project-shuaitu-back {
+  position: fixed;
+  left: 58px;
+  top: 48px;
+  z-index: 200;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 10px 22px;
+  border: 1px solid var(--figma-green, #3cb878);
+  border-radius: 999px;
+  background: rgba(19, 19, 19, 0.4);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  color: #fff;
+  font-family: var(--font-noto-sc, "Noto Sans SC", "PingFang SC", sans-serif);
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 1.2;
+  letter-spacing: 0.02em;
+  text-decoration: none;
+  cursor: pointer;
+  box-shadow: none;
+  transition: background 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+}
+
+.project-shuaitu-back:hover {
+  background: rgba(19, 19, 19, 0.52);
+  color: #fff;
+  border-color: var(--figma-green, #3cb878);
+}
+
+.project-shuaitu-back:focus-visible {
+  outline: none;
+  background: rgba(19, 19, 19, 0.52);
+  border-color: var(--figma-green, #3cb878);
+  box-shadow: 0 0 0 2px rgba(19, 19, 19, 0.8), 0 0 0 4px rgba(60, 184, 120, 0.55);
+}
+
+.project-shuaitu-fallback {
+  padding: 2rem;
+  color: #a5a5a8;
+  font-size: 15px;
+  line-height: 1.6;
+  max-width: 42rem;
+  margin: 0 auto;
+  font-family: var(--font-montserrat, "Montserrat", sans-serif);
+}
+
+.project-shuaitu-fallback code {
+  font-size: 0.9em;
+  color: #e0e0e0;
+}

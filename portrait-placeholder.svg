@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="525" height="651" viewBox="0 0 525 651">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0f1814"/>
+      <stop offset="100%" style="stop-color:#1a2a22"/>
+    </linearGradient>
+  </defs>
+  <rect width="525" height="651" fill="url(#bg)" rx="20"/>
+  <circle cx="262" cy="240" r="72" fill="#2a3d34" stroke="#3cb878" stroke-width="2"/>
+  <text x="262" y="420" text-anchor="middle" fill="#3cb878" font-family="system-ui,sans-serif" font-size="28" font-weight="700">�3</text>
+  <text x="262" y="458" text-anchor="middle" fill="#8aa99a" font-family="system-ui,sans-serif" font-size="15"> portrait.png >e</text>
+  <text x="262" y="484" text-anchor="middle" fill="#8aa99a" font-family="system-ui,sans-serif" font-size="15">assets/figma-71/ �bd�</text>
+</svg>

@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Portfolio · Game UX Designer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,600;0,700;0,800;0,900;1,400&family=Montserrat+Alternates:wght@400;500&family=Noto+Sans+JP:wght@400;500;700&family=Noto+Sans+SC:wght@400;500;600;700&family=Red+Hat+Text&family=Work+Sans&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="figma-portfolio.css" />
+  <link rel="stylesheet" href="components/Aurora.css" />
+</head>
+<body>
+  <div class="figma-viewport">
+    <div class="figma-root" id="top">
+      <div class="figma-guides" aria-hidden="true">
+        <span class="figma-guides__line"></span>
+        <span class="figma-guides__line"></span>
+        <span class="figma-guides__line"></span>
+        <span class="figma-guides__line"></span>
+        <span class="figma-guides__line"></span>
+        <span class="figma-guides__line"></span>
+        <span class="figma-guides__line"></span>
+      </div>
+
+      <div class="figma-hero-bg" aria-hidden="true">
+        <img
+          class="figma-hero-bg__base"
+          src="assets/figma-71/hero-bg.png"
+          alt=""
+          width="1920"
+          height="1120"
+          decoding="async"
+          onerror="this.style.display='none'"
+        />
+        <!-- Vanilla mount: same props as <Aurora colorStops={...} blend amplitude speed /> -->
+        <div
+          id="hero-aurora-root"
+          class="aurora-container figma-hero-bg__aurora"
+          data-color-stops='["#7cff67","#B497CF","#5227FF"]'
+          data-blend="0.41"
+          data-amplitude="1"
+          data-speed="0.5"
+        ></div>
+      </div>
+
+      <a class="figma-home" href="#top" aria-label="Home">
+        <img src="assets/figma-71/home-icon.svg" alt="" width="34" height="34" />
+      </a>
+
+      <nav class="figma-nav" aria-label="Primary">
+        <a class="is-active" href="#top">HOME</a>
+        <a href="#about">ABOUT</a>
+        <a class="nav-exp" href="#experience">Experience</a>
+        <a href="#project">PROJECT</a>
+      </nav>
+
+      <h1 class="figma-title-portfolio">Portfolio</h1>
+      <p class="figma-title-role">Game UX Designer</p>
+
+      <div class="figma-portrait">
+        <div id="portrait-tilt-root" class="figma-portrait__tilt"></div>
+      </div>
+
+      <p class="figma-name">王朝阳</p>
+      <div class="figma-contact-row">
+        <p class="figma-tel"><a href="tel:+861872670022">187 2670 0022</a></p>
+        <a class="figma-mail" href="mailto:designer_evan@163.com">designer_evan@163.com</a>
+      </div>
+
+      <div class="figma-hr figma-hr--1" aria-hidden="true"></div>
+
+      <section class="figma-card figma-card--edu" id="about" aria-labelledby="edu-title">
+        <h2 class="figma-card__title" id="edu-title">Education</h2>
+        <p class="figma-card__body">弘益大学（韩国）工业设计 硕士</p>
+        <p class="figma-card__body" style="margin-top: 8px">合肥大学&nbsp;&nbsp;产品设计 学士</p>
+      </section>
+
+      <section class="figma-card figma-card--work" aria-labelledby="work-title">
+        <h2 class="figma-card__title" id="work-title">work&nbsp;&nbsp;experience</h2>
+        <p class="figma-card__body" style="margin-top: 12px">网易游戏</p>
+      </section>
+
+      <section class="figma-card figma-card--award" aria-labelledby="award-title">
+        <h2 class="figma-card__title" id="award-title">award</h2>
+        <ul class="figma-award-list">
+          <li>2025NYX游戏金奖</li>
+          <li>2025伦敦设计银奖</li>
+          <li>网易集团2023 &amp; 2025艺术创新奖</li>
+          <li>网易部门CUD最佳效果奖</li>
+          <li>个人设计专利奖</li>
+        </ul>
+      </section>
+
+      <section class="figma-card figma-card--skills" aria-labelledby="skills-title">
+        <h2 class="figma-card__title" id="skills-title">Skills</h2>
+        <ul class="figma-skills-list">
+          <li>专业知识扎实，具备跨领域视野</li>
+          <li>拥有UE、COCOS游戏开发经验</li>
+          <li>通晓品牌、视觉、交互、动效设计等</li>
+          <li>拥有PC、手游多端、竖屏、多语言设计经验</li>
+          <li>责任心强忠诚度高，可当好下属也可管好团队</li>
+          <li>韩语topic高级</li>
+        </ul>
+      </section>
+
+      <div class="figma-hr figma-hr--2" aria-hidden="true"></div>
+
+      <section class="figma-projects" id="experience">
+        <h2 class="figma-projects__title" id="project">项目经历</h2>
+        <p class="figma-projects__intro">
+          先后参与过率土之滨、四方域之诗、荒野行动、指环王等多款游戏项目，拥有2年SLG、1.5年模拟经营、半年FPS多品类游戏设计经验
+        </p>
+
+        <div class="figma-timeline" aria-hidden="true">
+          <div class="figma-timeline__base"></div>
+          <div class="figma-timeline__seg1"></div>
+          <div class="figma-timeline__seg2"></div>
+          <div class="figma-timeline__active"></div>
+          <span class="figma-timeline__label-bg figma-timeline__label-bg--slg1">SLG</span>
+          <span class="figma-timeline__label-bg figma-timeline__label-bg--fps">FPS</span>
+          <span class="figma-timeline__label-bg figma-timeline__label-bg--sim">SIM</span>
+          <span class="figma-timeline__label-bg figma-timeline__label-bg--slg-big">SLG</span>
+          <div class="figma-timeline__vline figma-timeline__vline--1" aria-hidden="true"></div>
+          <div class="figma-timeline__vline figma-timeline__vline--2" aria-hidden="true"></div>
+          <div class="figma-timeline__vline figma-timeline__vline--3" aria-hidden="true"></div>
+        </div>
+
+        <span class="figma-timeline__game figma-timeline__game--1">指环王</span>
+        <span class="figma-timeline__game figma-timeline__game--2">荒野行动</span>
+        <span class="figma-timeline__game figma-timeline__game--3">四方域之诗</span>
+        <span class="figma-timeline__game figma-timeline__game--4">率土之滨</span>
+
+        <div class="figma-pro-meta figma-pro-meta--1">
+          <p class="figma-pro-meta__year">2022-2023</p>
+          <p class="figma-pro-meta__role figma-pro-meta__role--dim">交互设计师</p>
+        </div>
+        <div class="figma-pro-meta figma-pro-meta--2">
+          <p class="figma-pro-meta__year">2023</p>
+          <p class="figma-pro-meta__role">提案设计师</p>
+          <div class="figma-pro-meta__desc">
+            <p>理论与实践</p>
+            <p>全新的交互体验</p>
+          </div>
+        </div>
+        <div class="figma-pro-meta figma-pro-meta--3">
+          <p class="figma-pro-meta__year">2023-2024</p>
+          <p class="figma-pro-meta__role">主交互</p>
+          <div class="figma-pro-meta__desc">
+            <p>补偏救弊</p>
+            <p>从难用到好玩</p>
+          </div>
+        </div>
+        <div class="figma-pro-meta figma-pro-meta--4">
+          <p class="figma-pro-meta__year figma-pro-meta__year--bright">2024—2026</p>
+          <p class="figma-pro-meta__role figma-pro-meta__role--full">交互设计师</p>
+          <div class="figma-pro-meta__desc figma-pro-meta__desc--full">
+            <p>破茧焕新</p>
+            <p>为十年老游戏拓新途</p>
+          </div>
+        </div>
+
+        <a class="figma-view-link figma-view-link--1" href="#case"><img src="assets/figma-71/view-arrow.svg" alt="" width="17" height="12" /><span>VIEW</span></a>
+        <a class="figma-view-link figma-view-link--2" href="#case"><img src="assets/figma-71/view-arrow.svg" alt="" width="17" height="12" /><span>VIEW</span></a>
+        <a class="figma-view-link figma-view-link--3" href="project-shuaitu.html"><img src="assets/figma-71/view-arrow.svg" alt="" width="17" height="12" /><span>VIEW</span></a>
+      </section>
+
+      <div class="figma-hr figma-hr--3" aria-hidden="true"></div>
+
+      <section
+        class="figma-case"
+        id="case"
+        aria-label="项目案例轮播"
+        data-case-carousel
+        tabindex="0"
+      >
+        <h2 class="visually-hidden" id="case-banner">项目案例轮播</h2>
+
+        <div class="figma-case__viewport">
+          <div class="figma-case__track" id="case-carousel-track">
+        <!-- 轮播1 · 率土之滨 — 坐标相对各 slide 左上角 -->
+        <article class="figma-slide figma-slide--1" aria-label="率土之滨" data-carousel-slide="0">
+          <a class="figma-slide__detail-hit" href="project-shuaitu.html" aria-label="打开率土之滨案例详情页"></a>
+          <div class="figma-slide__banner">
+            <img src="assets/figma-71/game-banner.png" alt="" width="1920" height="908" />
+          </div>
+          <div class="figma-slide__fade figma-slide__fade--s1" aria-hidden="true"></div>
+          <div class="figma-slide__logo figma-slide__logo--s1">
+            <img src="assets/figma-71/game-logo.png" alt="" width="480" height="159" />
+          </div>
+          <div class="figma-slide__divider" aria-hidden="true"></div>
+          <p class="figma-slide__text figma-slide__intro figma-slide__intro--s1">
+            《率土之滨》是网易研发的三国题材赛季制地缘战略手游。以东汉末年乱世为背景，玩家化身主公，在225 万格可自由争夺的实时沙盘大世界中，经营城池、招募三国名将、组建同盟。核心玩法围绕土地资源争夺、同盟合纵连横、武将战法搭配、赛季剧本推演展开，无固定剧情，所有局势由玩家实时博弈决定。
+          </p>
+          <p class="figma-slide__kicker figma-slide__kicker--pos">Position</p>
+          <div class="figma-slide__pos">
+            <p class="figma-slide__roleline">交互设计师</p>
+            <p class="figma-slide__text">
+              以泛玩家为核心，为十年老游戏梳理体验秩序，降低策略门槛，拓宽泛用户路径，助力老产品长效增长。
+            </p>
+          </div>
+          <p class="figma-slide__kicker figma-slide__kicker--res">Results</p>
+          <p class="figma-slide__text figma-slide__res">
+            新手15分钟留存显著提升3.2%，优化了6个核心流程体验，获得玩家好评；轻量化设计得到制作人&amp;主策认可；社区设计获得国际NYX奖、伦敦设计奖，个人设计专利奖、集团2025艺术创新奖、2023年AIGC艺术创新奖、部门CUD最佳效果奖等
+          </p>
+        </article>
+
+        <!-- 轮播2 · 四方域之诗 -->
+        <article class="figma-slide figma-slide--2" aria-label="四方域之诗" data-carousel-slide="1">
+          <div class="figma-slide__banner figma-slide__banner--fullh">
+            <img src="assets/figma-71/banner-slide2-bg.png" alt="" width="1920" height="933" />
+          </div>
+          <div class="figma-slide__fade figma-slide__fade--s2" aria-hidden="true"></div>
+          <div class="figma-slide__logo figma-slide__logo--s2">
+            <img src="assets/figma-71/banner-slide2-logo.png" alt="" width="517" height="160" />
+          </div>
+          <div class="figma-slide__divider" aria-hidden="true"></div>
+          <p class="figma-slide__text figma-slide__intro figma-slide__intro--s2">
+            《四方域之诗》是一款由网易开发的二次元模拟经营游戏。这款游戏结合了战略和养成的元素，玩家在游戏中扮演一位学院的校长，通过管理和培养学生，进行自由冒险和探索。游戏采用了上帝视角，玩家可以在校园中进行各种管理和策略操作，以提升学生的能力和学院的声望。其核心玩法集中在策略养成与经营管理，通过精美的画面和丰富的剧情为玩家提供沉浸式的体验
+          </p>
+          <p class="figma-slide__kicker figma-slide__kicker--pos">Position</p>
+          <div class="figma-slide__pos">
+            <p class="figma-slide__roleline">主交互</p>
+            <p class="figma-slide__text">统筹交互需求排期&amp;跟进、核心系统设计迭代&amp;优化、交互设计品质把控</p>
+          </div>
+          <p class="figma-slide__kicker figma-slide__kicker--res">Results</p>
+          <p class="figma-slide__text figma-slide__res">
+            游戏核心体验有效提升，基础易用性得到改善，获得产品侧认可，助力项目获得游戏版号。
+          </p>
+        </article>
+
+        <!-- 轮播3 · 荒野行动 -->
+        <article class="figma-slide figma-slide--3" aria-label="荒野行动" data-carousel-slide="2">
+          <div class="figma-slide__banner figma-slide__banner--fullh figma-slide__banner--dim">
+            <img src="assets/figma-71/banner-slide3-bg.png" alt="" width="1920" height="933" />
+          </div>
+          <div class="figma-slide__fade figma-slide__fade--s2" aria-hidden="true"></div>
+          <div class="figma-slide__logo figma-slide__logo--s3">
+            <img src="assets/figma-71/wild-rm-bg.png" alt="荒野行动" width="559" height="143" />
+          </div>
+          <div class="figma-slide__divider" aria-hidden="true"></div>
+          <p class="figma-slide__text figma-slide__intro figma-slide__intro--s2">
+            《荒野行动》 是网易游戏自研的一款战术竞技游戏，自2017年上线以来，游戏团队对玩家反馈保持开放的态度，快速迭代响应。不仅创造了许多新鲜有趣的玩法，还率先在游戏内引入国产正能量元素，与多个经典动漫IP进行联动，受到海内外玩家喜爱。
+          </p>
+          <p class="figma-slide__kicker figma-slide__kicker--pos">Position</p>
+          <div class="figma-slide__pos">
+            <p class="figma-slide__roleline">交互创意提案设计师</p>
+            <p class="figma-slide__text">参与荒野行动3.0周年庆的前期创意提案设计</p>
+          </div>
+          <p class="figma-slide__kicker figma-slide__kicker--res">Results</p>
+          <p class="figma-slide__text figma-slide__res">
+            全新流程体验与大厅的界面迭代设计为周年庆进一步的落地打下基础，在周年庆上线之际登榜日本App Store游戏畅销榜第2名
+          </p>
+        </article>
+          </div>
+        </div>
+
+        <div class="figma-case__chrome" role="group" aria-label="案例轮播控制">
+          <button type="button" class="figma-case__btn figma-case__btn--prev" aria-controls="case-carousel-track" aria-label="上一案例">‹</button>
+          <div class="figma-case__dots" id="case-carousel-dots"></div>
+          <button type="button" class="figma-case__btn figma-case__btn--next" aria-controls="case-carousel-track" aria-label="下一案例">›</button>
+        </div>
+      </section>
+
+      <div class="figma-stats" role="region" aria-label="交付规模">
+        <div class="figma-stat">
+          <p class="figma-stat__num">3</p>
+          <span class="figma-stat__suffix">种</span>
+          <p class="figma-stat__label">游戏品类</p>
+        </div>
+        <div class="figma-stat figma-stat--20">
+          <p class="figma-stat__num">20</p>
+          <span class="figma-stat__suffix figma-stat__suffix--plus">+</span>
+          <p class="figma-stat__label">功能系统</p>
+        </div>
+        <div class="figma-stat figma-stat--500">
+          <p class="figma-stat__num">500</p>
+          <span class="figma-stat__suffix figma-stat__suffix--plus">+</span>
+          <p class="figma-stat__label">需求交付</p>
+        </div>
+        <div class="figma-stat figma-stat--1200">
+          <p class="figma-stat__num">1200</p>
+          <span class="figma-stat__suffix figma-stat__suffix--plus">+</span>
+          <p class="figma-stat__label">界面设计</p>
+        </div>
+      </div>
+
+      <footer class="figma-footer">
+        <div class="figma-footer__group">
+          <img class="figma-footer__mail-icon" src="assets/figma-71/footer-mail.svg" alt="" width="37" height="23" />
+          <p class="figma-footer__text">designer_evan@163.com</p>
+        </div>
+        <div class="figma-footer__group figma-footer__phone-wrap">
+          <span class="figma-footer__phone-ring" aria-hidden="true">
+            <img class="figma-footer__phone-icon" src="assets/figma-71/footer-phone.svg" alt="" width="32" height="21" />
+          </span>
+          <p class="figma-footer__text">TEL &amp; WECHAT:</p>
+          <p class="figma-footer__text figma-footer__text--light">187 2670 0022</p>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+  <style>
+    .visually-hidden {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border: 0;
+    }
+  </style>
+  <script type="module" src="/main.jsx"></script>
+</body>
+</html>
