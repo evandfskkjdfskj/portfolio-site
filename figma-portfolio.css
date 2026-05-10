@@ -241,23 +241,36 @@ a {
 }
 
 .figma-portrait__tilt {
+  position: relative;
   width: 100%;
   height: 100%;
-}
-
-/* React Bits TiltedCard：与原先 figure>img 裁切一致（覆盖组件内联宽高） */
-.figma-portrait .tilted-card-inner {
   overflow: hidden;
   border-radius: 20px;
 }
 
-.figma-portrait .tilted-card-img {
-  width: 100% !important;
-  height: 120.83% !important;
-  object-fit: cover !important;
-  object-position: center top !important;
-  margin-top: -13.5% !important;
-  border-radius: 20px !important;
+/* 静态头像（与原先 figure>img 裁切一致） */
+.figma-portrait__static {
+  display: block;
+  width: 100%;
+  height: 120.83%;
+  object-fit: cover;
+  object-position: center top;
+  margin-top: -13.5%;
+  border-radius: 20px;
+}
+
+.figma-portrait__overlay-label {
+  position: absolute;
+  left: 16px;
+  bottom: 14px;
+  margin: 0;
+  font-family: var(--font-montserrat), "Montserrat", sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  color: #fff;
+  text-shadow: 0 1px 8px rgba(0, 0, 0, 0.65);
+  z-index: 1;
+  pointer-events: none;
 }
 
 .figma-name {
