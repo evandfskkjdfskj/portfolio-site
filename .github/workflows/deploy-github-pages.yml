@@ -30,6 +30,11 @@ jobs:
         run: |
           npm ci
           npm run build
+      - name: Verify portrait fallback in dist
+        run: |
+          test -f dist/index.html
+          test -f dist/assets/figma-71/portrait.png
+          ls -la dist/assets/figma-71/
       - uses: actions/upload-pages-artifact@v3
         with:
           path: dist
