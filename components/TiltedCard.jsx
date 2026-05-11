@@ -81,6 +81,10 @@ export default function TiltedCard({
         height: containerHeight,
         width: containerWidth
       }}
+      onMouseDown={(e) => {
+        /* 避免点击/拖拽时浏览器给 figure 或子节点焦点，出现蓝框轮廓 */
+        e.preventDefault();
+      }}
       onMouseMove={handleMouse}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
@@ -105,6 +109,7 @@ export default function TiltedCard({
           src={imageSrc}
           alt={altText}
           className="tilted-card-img"
+          draggable={false}
           style={{
             width: imageWidth,
             height: imageHeight

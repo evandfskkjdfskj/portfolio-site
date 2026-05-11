@@ -30,8 +30,11 @@ export default defineConfig({
   root: ".",
   base: "./",
   server: {
-    open: true,
-    port: 5173
+    open: false,
+    port: 5173,
+    hmr: {
+      overlay: false
+    }
   },
   build: {
     outDir: "dist",
