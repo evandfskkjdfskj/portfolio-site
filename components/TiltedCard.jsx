@@ -1,4 +1,4 @@
-import { useRef, useState, useEffect } from "react";
+import { useRef, useState } from "react";
 import { motion, useMotionValue, useSpring } from "motion/react";
 import "./TiltedCard.css";
 
@@ -10,8 +10,6 @@ const springValues = {
 
 export default function TiltedCard({
   imageSrc,
-  /** 主图 404 / 加载失败时切换（无需自己改代码） */
-  imageSrcFallback = null,
   altText = "Tilted card image",
   captionText = "",
   containerHeight = "300px",
@@ -40,26 +38,6 @@ export default function TiltedCard({
   });
 
   const [lastY, setLastY] = useState(0);
-  const [activeSrc, setActiveSrc] = useState(imageSrc);
-  const loadRetried = useRef(false);
-
-  useEffect(() => {
-    setActiveSrc(imageSrc);
-    loadRetried.current = false;
-  }, [imageSrc]);
-
-  function handleImgError() {
-    // 大图在 Pages/CDN 上偶发中断，先 cache-bust 重试一次再换占位图（须改 state，勿直接改 img.src）
-    if (!loadRetried.current && typeof imageSrc === "string") {
-      loadRetried.current = true;
-      const base = imageSrc.split("?")[0];
-      setActiveSrc(`${base}?r=${Date.now()}`);
-      return;
-    }
-    if (imageSrcFallback && activeSrc !== imageSrcFallback) {
-      setActiveSrc(imageSrcFallback);
-    }
-  }
 
   function handleMouse(e) {
     if (!ref.current) return;
@@ -108,7 +86,9 @@ export default function TiltedCard({
       onMouseLeave={handleMouseLeave}
     >
       {showMobileWarning && (
-        <div className="tilted-card-mobile-alert">This effect is not optimized for mobile. Check on desktop.</div>
+        <div className="tilted-card-mobile-alert">
+          This effect is not optimized for mobile. Check on desktop.
+        </div>
       )}
 
       <motion.div
@@ -122,14 +102,9 @@ export default function TiltedCard({
         }}
       >
         <motion.img
-          src={activeSrc}
+          src={imageSrc}
           alt={altText}
           className="tilted-card-img"
-          draggable={false}
-          loading="eager"
-          decoding="sync"
-          fetchPriority="high"
-          onError={handleImgError}
           style={{
             width: imageWidth,
             height: imageHeight

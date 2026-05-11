@@ -248,15 +248,16 @@ a {
   border-radius: 20px;
 }
 
-/* 静态头像：用固定裁切区，避免百分比高度在部分浏览器下塌成 0 导致「不显示」 */
-.figma-portrait__static {
-  display: block;
+.figma-portrait__tilt-root {
   width: 100%;
   height: 100%;
   min-height: 100%;
-  object-fit: cover;
-  object-position: center 12%;
+}
+
+/* TiltedCard 内联图：与原先静态头像一致的裁切与圆角 */
+.figma-portrait .tilted-card-img {
   border-radius: 20px;
+  object-position: center 12%;
 }
 
 .figma-portrait__overlay-label {
